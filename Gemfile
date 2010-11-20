@@ -28,15 +28,15 @@ gem 'devise'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 
-group :development do
+ gem 'rspec-rails', '2.1.0'
+gem 'win32console'
 
- gem 'rspec-rails', '2.0.1'
 
-end
 
-group :test do
-	
-   gem 'rspec', '2.0.1'	
-   gem 'webrat'
 
-end
+  gem 'rspec', '2.1.0'	
+   gem 'webrat', '0.7.1'
+
+
+
+
