@@ -1,0 +1,5 @@
+class Order < ActiveRecord::Base
+
+attr_accessor :card_type, :cardholder_name, :card_no, :expiry_date 
+
+end

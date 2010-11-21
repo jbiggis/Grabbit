@@ -1,11 +1,26 @@
 Grabbit::Application.routes.draw do
+  get "orders/index"
+
+  get "orders/new"
+
+  get "orders/create"
+
+  get "orders/show"
+
+  get "orders/edit"
+
+  get "orders/update"
+
+  get "orders/destroy"
+
   get "pages/home"
 
   get "pages/contact"
 
 get "deals/home"
 
-match "deals/new", :to => 'deals#new'
+
+resource :deals
 
 root :to => 'deals#home'
 

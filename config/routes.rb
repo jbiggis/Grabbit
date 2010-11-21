@@ -1,4 +1,6 @@
 Grabbit::Application.routes.draw do
+resource :orders
+
   get "pages/home"
 
   get "pages/contact"
