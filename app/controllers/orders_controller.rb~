@@ -6,7 +6,11 @@ class OrdersController < ApplicationController
 	
 	@title = "New Order"
 	@deal = Deal.find(3)
+
+if user_signed_in? == false 
+
 	@user = User.new
+  end
 	@order = Order.new
 
 

@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   def new
 	
 	@title = "New Order"
-	@deal = Deal.find(3)
+	@deal = Deal.find(params[:id])
 
 if user_signed_in? == false 
 

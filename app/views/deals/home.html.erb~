@@ -1,7 +1,7 @@
 <h1><%=title%></h1>
 <p><%=@deal.title%></p>
 
-<%= link_to "Buy!", new_order_path%>
+<%= link_to "Buy!", new_orders_path(:id => 1 )%>
 
 <p><%=@deal.price%></p>
 <p><%=@deal.value%></p>
