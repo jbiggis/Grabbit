@@ -7,7 +7,7 @@ class CreateDeals < ActiveRecord::Migration
       t.string :description
       t.string :fine_print
       t.datetime :start_time
-      t.datetime :end_time
+      t.date_time :end_time
 
       t.timestamps
     end

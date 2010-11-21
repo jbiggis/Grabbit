@@ -5,8 +5,7 @@ Grabbit::Application.routes.draw do
 
 get "deals/home"
 
-
-resource :deals
+match "deals/new", :to => 'deals#new'
 
 root :to => 'deals#home'
 

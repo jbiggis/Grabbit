@@ -1,0 +1,14 @@
+require 'spec_helper'
+
+describe Test do
+  
+	before(:each) do
+		@attr = { :name="Example User", :email =>"user@example.com"}
+	end
+
+	it "should create a new instance given valud attributes" do
+		Test.create!(@attr)
+	end
+
+	it "should require a name"
+end

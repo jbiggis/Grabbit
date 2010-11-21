@@ -1,0 +1,12 @@
+<h1><%=title%></h1>
+<p><%=deal.title%></p>
+
+<p><%=deal.price%></p>
+<p><%=deal.value%></p>
+<p><%=deal.description%>n</p>
+<p><%=deal.fine_print%></p>
+<p><%=deal.start_time%></p>
+<p><%=deal.end_time%></p>
+
+
+
