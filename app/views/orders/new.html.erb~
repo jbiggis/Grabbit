@@ -3,7 +3,11 @@
 
 
 <%form_for(@order) do |f|%>
-	
+
+
+<%= f.hidden_field :deal_id, :value => @deal.id %>
+
+
 <table>
   <tr>
 	<th>Description</th>
@@ -46,6 +50,7 @@
 
 	<br/>
 
+	<% if user_signed_in? == false %>
 
 	Create an Account
 
@@ -67,16 +72,12 @@
 	</div>
 
 	<% end %>
-
+<% end %>
 
 
 Billing Information
 
-		<div class="field">
-		<%= f.label :card_type %><br/>
-		<%= f.text_field :card_type %>
 
-	</div>
 
 		<div class="field">
 		<%= f.label :cardholder_name %><br/>
@@ -85,8 +86,14 @@ Billing Information
 	</div>
 
 		<div class="field">
-		<%= f.label :card_no %><br/>
-		<%= f.text_field :card_no %>
+		<%= f.label :card_number %><br/>
+		<%= f.text_field :card_number %>
+
+	</div>
+
+			<div class="field">
+		<%= f.label :security_code %><br/>
+		<%= f.text_field :security_code %>
 
 	</div>
 
@@ -95,6 +102,30 @@ Billing Information
 		<%= f.text_field :expiry_date %>
 
 	</div>
+
+		<div class="field">
+		<%= f.label :billing_address %><br/>
+		<%= f.text_field :billing_address %>
+
+	</div>
+
+			<div class="field">
+		<%= f.label :city %><br/>
+		<%= f.text_field :city %>
+
+	</div>
+
+		<div class="field">
+		<%= f.label :province %><br/>
+		<%= f.text_field :province %>
+
+	</div>
+		<div class="field">
+		<%= f.label :postal_code %><br/>
+		<%= f.text_field :postal_code %>
+
+	</div>
+
 	<div class="action">
 		<%= f.submit %>
 	

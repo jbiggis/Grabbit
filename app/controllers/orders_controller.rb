@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
 	@title = "New Order"
 	@deal = Deal.find(params[:id])
 
+	@user = current_user
 if user_signed_in? == false 
 
 	@user = User.new
@@ -19,6 +20,27 @@ if user_signed_in? == false
   def create
 
 
+if user_signed_in? == false 
+
+@user = User.create(params[:user])
+
+params[:order][:user_id] = @user.id
+
+end 
+
+
+quantity = params[:order][:quantity].to_i
+
+until quantity == 0
+
+@order = Order.new(params[:order])
+
+@order.coupon_no = @order.user_id
+@order.save
+
+quantity -= 1
+
+end
 
   end
 

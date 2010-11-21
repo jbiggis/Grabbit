@@ -9,7 +9,7 @@
 <body>
 
 	<div id="header"/>
-		<%= image_tag("logo.png", :alt => "Grabbit") %>
+		<%= image_tag("logo.png", :alt => "Grabbit", :width =>"100px") %>
 		
 		<div id="user-nav"/>
 
@@ -23,7 +23,9 @@
 		</div>
 
 	</div>
-	
+
+<%= flash[:notice] %
+
 <%= yield %>
 
 </body>
