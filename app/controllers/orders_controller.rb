@@ -35,8 +35,18 @@ until quantity == 0
 
 @order = Order.new(params[:order])
 
+
 @order.coupon_no = @order.user_id
 @order.save
+
+@coupon = Coupon.new
+
+@coupon.order_id = @order.id
+@coupon.user_id = @order.user_id
+@coupon.deal_id = @order.deal_id
+@coupon.status = 2
+
+@coupon.save
 
 quantity -= 1
 

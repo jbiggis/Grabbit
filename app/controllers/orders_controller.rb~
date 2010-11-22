@@ -22,9 +22,7 @@ if user_signed_in? == false
 
 if user_signed_in? == false 
 
-@user = User.new(params[:user])
-
-@user.save
+@user = User.create(params[:user])
 
 params[:order][:user_id] = @user.id
 
